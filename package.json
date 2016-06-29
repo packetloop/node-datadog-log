@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "packetloop-node-datadog-log",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "author": {
     "name": "Nik Butenko",
     "email": "nik@butenko.me",
