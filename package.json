@@ -1,0 +1,58 @@
+{
+  "private": true,
+  "name": "packetloop-node-datadog-log",
+  "version": "0.0.0",
+  "author": {
+    "name": "Nik Butenko",
+    "email": "nik@butenko.me",
+    "url": "https://twitter.com/nkbtnk"
+  },
+  "bugs": {
+    "url": "https://github.com/packetloop/node-datadog-log/issues"
+  },
+  "contributors": [
+    {
+      "name": "Nik Butenko",
+      "email": "nik@butenko.me",
+      "url": "https://twitter.com/nkbtnk"
+    }
+  ],
+  "description": "Packetloop's shell script to parse standard new-line delimited JSON log and push some of it to Datadog",
+  "homepage": "https://github.com/packetloop/node-datadog-log",
+  "keywords": [
+    "packetloop",
+    "javascript",
+    "log",
+    "json",
+    "datadog"
+  ],
+  "license": "MIT",
+  "main": "lib/index.js",
+  "bin": {
+    "packetloop-node-datadog-log": "lib/bin.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/packetloop/node-datadog-log.git"
+  },
+  "scripts": {
+    "build": "babel src --out-dir lib",
+    "lint": "eslint .",
+    "test": "echo No tests",
+    "postversion": "git push --follow-tags",
+    "prepublish": "npm run build -s"
+  },
+  "engines": {
+    "node": "6"
+  },
+  "dependencies": {
+    "packetloop-node-pretty-log": "github:packetloop/node-pretty-log"
+  },
+  "devDependencies": {
+    "babel-cli": "^6",
+    "babel-preset-es2015-node6": "^0.2",
+    "eslint": "^2",
+    "eslint-config-packetloop": "github:packetloop/eslint-config-packetloop"
+  },
+  "peerDependencies": {}
+}
