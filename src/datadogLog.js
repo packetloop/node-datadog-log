@@ -18,12 +18,13 @@ const isRequried = option => {
 
 
 const {
+  DATADOG_CURL = 'curl',
   DATADOG_HOST = 'app.datadoghq.com',
   DATADOG_API_KEY = isRequried('DATADOG_API_KEY')
 } = process.env;
 
 
-const datadog = (path, data) => spawn('curl', [
+const datadog = (path, data) => spawn(DATADOG_CURL, [
   '--silent',
   '--show-error',
   '--request', 'POST',
