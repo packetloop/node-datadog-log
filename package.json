@@ -1,39 +1,13 @@
 {
-  "private": true,
-  "name": "packetloop-node-datadog-log",
+  "name": "@packetloop/node-datadog-log",
   "version": "1.0.0",
-  "author": {
-    "name": "Nik Butenko",
-    "email": "nik@butenko.me",
-    "url": "https://twitter.com/nkbtnk"
+  "publishConfig": {
+    "registry": "https://api.bintray.com/npm/arbornetworks/packetloop"
   },
-  "bugs": {
-    "url": "https://github.com/packetloop/node-datadog-log/issues"
-  },
-  "contributors": [
-    {
-      "name": "Nik Butenko",
-      "email": "nik@butenko.me",
-      "url": "https://twitter.com/nkbtnk"
-    }
-  ],
   "description": "Packetloop's shell script to parse standard new-line delimited JSON log and push some of it to Datadog",
-  "homepage": "https://github.com/packetloop/node-datadog-log",
-  "keywords": [
-    "packetloop",
-    "javascript",
-    "log",
-    "json",
-    "datadog"
-  ],
-  "license": "MIT",
   "main": "lib/index.js",
   "bin": {
     "packetloop-node-datadog-log": "lib/bin.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/packetloop/node-datadog-log.git"
   },
   "scripts": {
     "build": "babel src --out-dir lib",
@@ -42,17 +16,45 @@
     "postversion": "git push --follow-tags",
     "prepublish": "npm run build -s"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/packetloop/node-datadog-log.git"
+  },
+  "keywords": [
+    "packetloop",
+    "javascript",
+    "log",
+    "json",
+    "datadog"
+  ],
+  "author": {
+    "name": "Nik Butenko",
+    "email": "nik@butenko.me",
+    "url": "https://twitter.com/@nkbtnk"
+  },
+  "license": "MIT",
+  "contributors": [
+    {
+      "name": "Nik Butenko",
+      "email": "nik@butenko.me",
+      "url": "https://twitter.com/nkbtnk"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/packetloop/node-datadog-log/issues"
+  },
+  "homepage": "https://github.com/packetloop/node-datadog-log",
   "engines": {
     "node": "6"
   },
   "dependencies": {
-    "packetloop-node-pretty-log": "github:packetloop/node-pretty-log"
+    "@packetloop/node-pretty-log": "^1"
   },
   "devDependencies": {
+    "@packetloop/eslint-config-packetloop": "^1",
     "babel-cli": "^6",
     "babel-preset-es2015-node6": "^0.2",
-    "eslint": "^2",
-    "eslint-config-packetloop": "github:packetloop/eslint-config-packetloop"
+    "eslint": "^2"
   },
   "peerDependencies": {}
 }

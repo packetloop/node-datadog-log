@@ -1,6 +1,6 @@
 const util = require('util');
 const spawn = require('child_process').spawn;
-const {LogProcessor} = require('packetloop-node-pretty-log');
+const {LogProcessor} = require('@packetloop/node-pretty-log');
 
 
 const OptionRequired = function (option) {
