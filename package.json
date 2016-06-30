@@ -1,6 +1,6 @@
 {
   "name": "@packetloop/node-datadog-log",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "publishConfig": {
     "registry": "https://api.bintray.com/npm/arbornetworks/packetloop"
   },
